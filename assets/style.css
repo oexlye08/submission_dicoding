@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     display: inline;
 }
@@ -23,6 +27,7 @@ body {
 
 nav {
     padding: 10px;
+	position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
@@ -562,9 +567,18 @@ header .container {
     .about {
         display: flex;
         width: auto;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-        padding: 0 20px;
         margin: 0;
+    }
+
+    .about-card {
+        display: flex;
+        padding: 10px 50px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     #about .container .row .column .about h3, h2, div, p {
