@@ -26,15 +26,10 @@ body {
 }
 
 nav {
-    padding: 10px;
-	position: -webkit-sticky;
-    position: sticky;
     top: 0;
 }
 
 nav a {
-    font-size: 18px;
-    font-weight: 400;
     text-decoration: none;
     color: white;
 }
@@ -110,13 +105,17 @@ p {
 }
 
 header .container {
+    width: 100%;
+    height: 50px;
     display: flex;
+    position: fixed;
+    background-color: #5a236b71;
 }
 
 .logo {
-    height: 50px;
+    height: 40px;
     flex-basis: 15%;
-    padding: 5px 0 0 10px;
+    padding: 2px 0 0 10px;
 }
 
 .logo-brand {
@@ -130,6 +129,10 @@ header .container {
     height: 70px;
     flex-basis: 70%;
     text-align: center;
+}
+
+.hamburger {
+    visibility: hidden;
 }
 
 /* #home {
@@ -167,7 +170,6 @@ header .container {
 }
 
 .btn {
-	font-weight: bold;
     padding: 10px 30px;
     min-width: 140px;
     background-color: #8BC34A;
@@ -182,7 +184,7 @@ header .container {
 
 .btn:hover {
     box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.35);
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .btn + .btn {
@@ -520,9 +522,20 @@ header .container {
         visibility: hidden;
     }
 
+    header .container {
+        visibility: collapse;
+        position: sticky;
+    }
+
     .logo {
+        visibility: visible;
         flex-basis: 100%;
         padding: 5px;
+        background-color: transparent;
+    }
+
+    .hamburger {
+        visibility: visible;
     }
 
     #banner .img-banner-background {
